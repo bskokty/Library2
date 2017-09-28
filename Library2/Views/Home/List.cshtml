@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Library2.Models.Books>
+@{
+    ViewBag.Title = "List";
+}
+
+@*<h2>List</h2>*@
+
+<div class="table-responsive">
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                
+                <td > BookID </td>
+                <td > Book Name </td>
+                <td > Writer </td>
+                <td > Publisher </td>
+                <td > # </td>
+
+            </tr>
+        </thead>
+        <tbody>
+            
+            @foreach (var item in Model)
+            {
+                <tr class="active">
+                    <td>@item.BookID</td>
+                    <td>@item.BookName</td>
+                    <td>@item.Writer</td>
+                    <td>@item.PublisherName</td>
+                    <td>#</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    </div>

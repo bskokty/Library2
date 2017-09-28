@@ -1,0 +1,70 @@
+﻿@model Library2.Models.Books
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<div class="row">
+    <form action="/Home/Create" method="post">
+        <div class="form-group row">
+            <label for="bookName" class="col-sm-2 col-form-label">Book Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="bookName" placeholder="Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="writer" class="col-sm-2 col-form-label">Writer</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="writer" placeholder="Writer">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Publisher" class="col-sm-2 col-form-label">Publisher</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="publisher" placeholder="Publisher">
+            </div>
+        </div>
+        @*<div class="form-group row">
+            <label for="datetimepicker1" class="col-sm-2 col-form-label">Publish Date</label>
+           
+            <div class="container">
+                <div class="row">
+                    <div class='col-sm-6'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>
+            </div>
+         </div>*@
+
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+<script src="~/Scripts/bootstrap-datetimepicker.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/moment.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+                   
+                });
+
+               
+            });
+</script>
